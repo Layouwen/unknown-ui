@@ -1,1 +1,1 @@
-export const Test = () => <div>hello</div>
+export const Test = () => <div class="font-bold underline">hello</div>;
