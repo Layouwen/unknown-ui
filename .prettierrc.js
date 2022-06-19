@@ -1,3 +1,0 @@
-modules.export = {
-  semi: false
-}
