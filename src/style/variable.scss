@@ -1,6 +1,8 @@
 // 定义主题变量
 $s-border-radius: var(--s-border-radius, 2px); //一般圆角
+$s-font-size-sm: var(--s-font-size-md, 10px); //当组件size为''时使用此字号大小
 $s-font-size-md: var(--s-font-size-md, 12px); //当组件size为''时使用此字号大小
+$s-font-size-lg: var(--s-font-size-md, 14px); //当组件size为''时使用此字号大小
 $s-animation-duration-slow: var(--s-animation-duration-slow, 300ms);
 $s-animation-ease-in-out-smooth: var(
     --s-animation-ease-in-out-smooth,

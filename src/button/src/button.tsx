@@ -5,12 +5,14 @@ export default defineComponent({
   name: "SButton",
   props: buttonProps,
   setup(props: ButtonProps, { slots }) {
-    const { type } = toRefs(props);
+    const { type, size } = toRefs(props);
 
     return () => {
       const defaultSlot = slots.default?.() || "按钮";
       return (
-        <button class={`s-btn s-btn--${type.value}`}>{defaultSlot}</button>
+        <button class={`s-btn s-btn--${type.value} s-btn--${size.value}`}>
+          {defaultSlot}
+        </button>
       );
     };
   },

@@ -1,7 +1,9 @@
 <script setup lang="ts"></script>
 
 <template>
-  <SButton type="primary"></SButton>
+  <SButton type="primary" size="small">按钮</SButton>
+  <SButton type="primary" size="medium">按钮</SButton>
+  <SButton type="primary" size="large">按钮</SButton>
 </template>
 
 <style>

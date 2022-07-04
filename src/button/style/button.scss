@@ -7,6 +7,8 @@
 
   // 导入type相关的样式
   @include button-variant(button-config.$type);
+  // 导入size相关的样式
+  @include button-variant(button-config.$size);
 
   // 导入hover等伪类样式
   @include button-variant(button-config.$pseudo, true);
