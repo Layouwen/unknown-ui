@@ -27,3 +27,7 @@ $s-brand-active-focus: var(
     --s-brand-active-focus,
     #344899
 ); // 品牌色焦点色（重度加深）
+$s-primary-disabled: var(--s-primary-disabled, #98a8df); // 主要按钮禁用状态
+$s-disabled-text: var(--s-disabled-text, #757a83); // 禁用文本
+$s-disabled-bg: var(--s-disabled-bg, #c6c9cf); // 禁用背景
+$s-disabled-line: var(--s-disabled-line, #a5a8ad); // 禁用边框

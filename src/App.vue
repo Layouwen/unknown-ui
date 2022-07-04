@@ -1,9 +1,13 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const confirm = () => {
+  console.log("confirm");
+};
+</script>
 
 <template>
-  <SButton type="primary" size="small">按钮</SButton>
-  <SButton type="primary" size="medium">按钮</SButton>
-  <SButton type="primary" size="large">按钮</SButton>
+  <SButton type="primary" size="small" @click="confirm">按钮</SButton>
+  <SButton type="primary" size="medium" @click="confirm">按钮</SButton>
+  <SButton type="primary" size="large" @click="confirm" disabled>按钮</SButton>
 </template>
 
 <style>
