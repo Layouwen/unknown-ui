@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <FkButton></FkButton>
+  <SButton type="primary"></SButton>
 </template>
 
 <style>
