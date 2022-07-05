@@ -8,6 +8,7 @@ const confirm = () => {
   <SButton type="primary" size="small" @click="confirm">按钮</SButton>
   <SButton type="primary" size="medium" @click="confirm">按钮</SButton>
   <SButton type="primary" size="large" @click="confirm" disabled>按钮</SButton>
+  <SButton type="primary" size="large" @click="confirm" block>按钮</SButton>
 </template>
 
 <style>
