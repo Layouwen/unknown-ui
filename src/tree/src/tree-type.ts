@@ -2,14 +2,14 @@ import { PropType, ExtractPropTypes } from "vue";
 
 export const treeProps = {
   data: {
-    type: Array as PropType<IInnerTreeNode[]>,
+    type: Array as PropType<ITreeNode[]>,
     required: true,
   },
 } as const;
 
 export type TreeProps = ExtractPropTypes<typeof treeProps>;
 
-interface ITreeNode {
+export interface ITreeNode {
   label: string;
   id?: string;
   children?: ITreeNode[];
@@ -23,7 +23,7 @@ interface ITreeNode {
   disableToggle?: boolean;
 }
 
-interface IInnerTreeNode extends ITreeNode {
+export interface IInnerTreeNode extends ITreeNode {
   parentId?: string; // 父节点ID
   level: number; // 节点层级
   isLeaf?: boolean; // 是否叶子结点
