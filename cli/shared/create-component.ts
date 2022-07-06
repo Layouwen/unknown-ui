@@ -1,5 +1,8 @@
 import { ensureDirSync } from "fs-extra";
+import { lightBlue, lightGreen } from "kolorist";
 import { resolve } from "path";
+import { writeFileSync } from "fs";
+import getCoreTemplate from "../template/core";
 
 export interface ComponentMeta {
   name: string;
@@ -18,4 +21,10 @@ export default function createComponent(meta: ComponentMeta) {
   ensureDirSync(compSrcDir);
   ensureDirSync(compStyleDir);
   ensureDirSync(compTestDir);
+
+  const coreFilePath = resolve(compSrcDir, name) + ".tsx";
+  writeFileSync(coreFilePath, getCoreTemplate(name));
+
+  console.log(lightGreen(`✔️ 创建组件 ${name} 成功！`));
+  console.log(lightBlue(`✔️ 组件目录为 ${componentDir}`));
 }
