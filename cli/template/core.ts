@@ -8,7 +8,7 @@ export default function getCoreTemplate(name: string) {
   const propsFileName = `${name}-type`;
 
   return `import { defineComponent } from "vue";
-import { ${propsName}, ${propsTypeName} } from "${propsFileName}";
+import { ${propsName}, ${propsTypeName} } from "./${propsFileName}";
 
 export default defineComponent({
   name: "${compName}",

@@ -1,4 +1,4 @@
-lockfileVersion: 5.4
+lockfileVersion: 5.3
 
 specifiers:
   '@types/node': ^18.0.2
@@ -15,7 +15,7 @@ devDependencies:
   fs-extra: registry.npmmirror.com/fs-extra/10.1.0
   inquirer: 8.2.4
   kolorist: registry.npmmirror.com/kolorist/1.5.1
-  ts-node-dev: registry.npmmirror.com/ts-node-dev/2.0.0_lop4wfqyu2mwmbxemtyedy3zcy
+  ts-node-dev: registry.npmmirror.com/ts-node-dev/2.0.0_5b9fcb1618a6996606e464f041e37916
   typescript: 4.7.4
 
 packages:
@@ -137,20 +137,6 @@ packages:
     dependencies:
       escape-string-regexp: 1.0.5
     dev: true
-
-  /fsevents/2.3.2:
-    resolution: {integrity: sha1-ilJveLj99GI7cJ4Ll1xSwkwC/Ro=}
-    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
-    os: [darwin]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /graceful-fs/4.2.10:
-    resolution: {integrity: sha512-9ByhssR2fPVsNZj478qUUbKfmL0+t5BDVyjShtyZZLiK7ZDAArFFfopyOTj0M05wE2tJPisA4iTnnXl2YoPvOA==}
-    requiresBuild: true
-    dev: true
-    optional: true
 
   /has-flag/4.0.0:
     resolution: {integrity: sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==}
@@ -532,7 +518,7 @@ packages:
       normalize-path: registry.npmmirror.com/normalize-path/3.0.0
       readdirp: registry.npmmirror.com/readdirp/3.6.0
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: registry.npmmirror.com/fsevents/2.3.2
     dev: true
 
   registry.npmmirror.com/commander/9.3.0:
@@ -588,6 +574,16 @@ packages:
     name: fs.realpath
     version: 1.0.0
     dev: true
+
+  registry.npmmirror.com/fsevents/2.3.2:
+    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/fsevents/-/fsevents-2.3.2.tgz}
+    name: fsevents
+    version: 2.3.2
+    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
 
   registry.npmmirror.com/function-bind/1.1.1:
     resolution: {integrity: sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/function-bind/-/function-bind-1.1.1.tgz}
@@ -694,7 +690,7 @@ packages:
     dependencies:
       universalify: registry.npmmirror.com/universalify/2.0.0
     optionalDependencies:
-      graceful-fs: 4.2.10
+      graceful-fs: registry.npmmirror.com/graceful-fs/4.2.10
     dev: true
 
   registry.npmmirror.com/kolorist/1.5.1:
@@ -848,7 +844,7 @@ packages:
     hasBin: true
     dev: true
 
-  registry.npmmirror.com/ts-node-dev/2.0.0_lop4wfqyu2mwmbxemtyedy3zcy:
+  registry.npmmirror.com/ts-node-dev/2.0.0_5b9fcb1618a6996606e464f041e37916:
     resolution: {integrity: sha512-ywMrhCfH6M75yftYvrvNarLEY+SUXtUvU8/0Z6llrHQVBx12GiFk5sStF8UdfE/yfzk9IAq7O5EEbTQsxlBI8w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/ts-node-dev/-/ts-node-dev-2.0.0.tgz}
     id: registry.npmmirror.com/ts-node-dev/2.0.0
     name: ts-node-dev
@@ -870,7 +866,7 @@ packages:
       rimraf: registry.npmmirror.com/rimraf/2.7.1
       source-map-support: registry.npmmirror.com/source-map-support/0.5.21
       tree-kill: registry.npmmirror.com/tree-kill/1.2.2
-      ts-node: registry.npmmirror.com/ts-node/10.8.2_lop4wfqyu2mwmbxemtyedy3zcy
+      ts-node: registry.npmmirror.com/ts-node/10.8.2_5b9fcb1618a6996606e464f041e37916
       tsconfig: registry.npmmirror.com/tsconfig/7.0.0
       typescript: 4.7.4
     transitivePeerDependencies:
@@ -879,7 +875,7 @@ packages:
       - '@types/node'
     dev: true
 
-  registry.npmmirror.com/ts-node/10.8.2_lop4wfqyu2mwmbxemtyedy3zcy:
+  registry.npmmirror.com/ts-node/10.8.2_5b9fcb1618a6996606e464f041e37916:
     resolution: {integrity: sha512-LYdGnoGddf1D6v8REPtIH+5iq/gTDuZqv2/UJUU7tKjuEU8xVZorBM+buCGNjj+pGEud+sOoM4CX3/YzINpENA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/ts-node/-/ts-node-10.8.2.tgz}
     id: registry.npmmirror.com/ts-node/10.8.2
     name: ts-node
