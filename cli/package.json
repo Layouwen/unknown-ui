@@ -12,7 +12,7 @@
   "devDependencies": {
     "commander": "^9.3.0",
     "fs-extra": "^10.1.0",
-    "inquirer": "^9.0.0",
+    "inquirer": "8",
     "kolorist": "^1.5.1",
     "ts-node-dev": "^2.0.0",
     "typescript": "^4.7.4"
