@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@types/node': ^18.0.2
   commander: ^9.3.0
   fs-extra: ^10.1.0
   inquirer: '8'
@@ -9,14 +10,19 @@ specifiers:
   typescript: ^4.7.4
 
 devDependencies:
+  '@types/node': 18.0.2
   commander: registry.npmmirror.com/commander/9.3.0
   fs-extra: registry.npmmirror.com/fs-extra/10.1.0
   inquirer: 8.2.4
   kolorist: registry.npmmirror.com/kolorist/1.5.1
-  ts-node-dev: registry.npmmirror.com/ts-node-dev/2.0.0_typescript@4.7.4
+  ts-node-dev: registry.npmmirror.com/ts-node-dev/2.0.0_lop4wfqyu2mwmbxemtyedy3zcy
   typescript: 4.7.4
 
 packages:
+
+  /@types/node/18.0.2:
+    resolution: {integrity: sha512-b947SdS4GH+g2W33wf5FzUu1KLj5FcSIiNWbU1ZyMvt/X7w48ZsVcsQoirIgE/Oq03WT5Qbn/dkY0hePi4ZXcQ==}
+    dev: true
 
   /ansi-escapes/4.3.2:
     resolution: {integrity: sha1-ayKR0dt9mLZSHV8e+kLQ86n+tl4=}
@@ -842,7 +848,7 @@ packages:
     hasBin: true
     dev: true
 
-  registry.npmmirror.com/ts-node-dev/2.0.0_typescript@4.7.4:
+  registry.npmmirror.com/ts-node-dev/2.0.0_lop4wfqyu2mwmbxemtyedy3zcy:
     resolution: {integrity: sha512-ywMrhCfH6M75yftYvrvNarLEY+SUXtUvU8/0Z6llrHQVBx12GiFk5sStF8UdfE/yfzk9IAq7O5EEbTQsxlBI8w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/ts-node-dev/-/ts-node-dev-2.0.0.tgz}
     id: registry.npmmirror.com/ts-node-dev/2.0.0
     name: ts-node-dev
@@ -864,7 +870,7 @@ packages:
       rimraf: registry.npmmirror.com/rimraf/2.7.1
       source-map-support: registry.npmmirror.com/source-map-support/0.5.21
       tree-kill: registry.npmmirror.com/tree-kill/1.2.2
-      ts-node: registry.npmmirror.com/ts-node/10.8.2_typescript@4.7.4
+      ts-node: registry.npmmirror.com/ts-node/10.8.2_lop4wfqyu2mwmbxemtyedy3zcy
       tsconfig: registry.npmmirror.com/tsconfig/7.0.0
       typescript: 4.7.4
     transitivePeerDependencies:
@@ -873,7 +879,7 @@ packages:
       - '@types/node'
     dev: true
 
-  registry.npmmirror.com/ts-node/10.8.2_typescript@4.7.4:
+  registry.npmmirror.com/ts-node/10.8.2_lop4wfqyu2mwmbxemtyedy3zcy:
     resolution: {integrity: sha512-LYdGnoGddf1D6v8REPtIH+5iq/gTDuZqv2/UJUU7tKjuEU8xVZorBM+buCGNjj+pGEud+sOoM4CX3/YzINpENA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/ts-node/-/ts-node-10.8.2.tgz}
     id: registry.npmmirror.com/ts-node/10.8.2
     name: ts-node
@@ -895,6 +901,7 @@ packages:
       '@tsconfig/node12': registry.npmmirror.com/@tsconfig/node12/1.0.11
       '@tsconfig/node14': registry.npmmirror.com/@tsconfig/node14/1.0.3
       '@tsconfig/node16': registry.npmmirror.com/@tsconfig/node16/1.0.3
+      '@types/node': 18.0.2
       acorn: registry.npmmirror.com/acorn/8.7.1
       acorn-walk: registry.npmmirror.com/acorn-walk/8.2.0
       arg: registry.npmmirror.com/arg/4.1.3
