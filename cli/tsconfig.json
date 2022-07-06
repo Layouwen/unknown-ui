@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
     "outDir": "./build",
-    "module": "commonjs"
+    "module": "commonjs",
+    "lib": [
+      "es2016",
+      "dom"
+    ]
   }
 }
