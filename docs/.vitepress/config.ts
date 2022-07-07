@@ -27,7 +27,14 @@ const config = {
   markdown: {
     config(md: any) {
       const { demoBlockPlugin } = require("vitepress-theme-demoblock");
-      md.use(demoBlockPlugin);
+      md.use(demoBlockPlugin, {
+        scriptReplaces: [
+          {
+            searchValue: /import ({.*}) from "vue"/g,
+            replaceValue: (s: string, s1: string) => `const ${s1} = Vue`,
+          },
+        ],
+      });
     },
   },
 };
