@@ -21,7 +21,7 @@ export function useTree(node: Ref<ITreeNode[]> | ITreeNode[]) {
     return result;
   });
 
-  const getChildren = (node: IInnerTreeNode) => {
+  const getChildren = (node: IInnerTreeNode, recursive = true) => {
     const result = [] as IInnerTreeNode[];
     // 找到该节点开始位置
     const index = innerData.value.findIndex((i) => i === node);
@@ -31,7 +31,11 @@ export function useTree(node: Ref<ITreeNode[]> | ITreeNode[]) {
       i < innerData.value.length && node.level < innerData.value[i].level;
       i++
     ) {
-      result.push(innerData.value[i]);
+      if (recursive) {
+        result.push(innerData.value[i]);
+      } else if (node.level === innerData.value[i].level - 1) {
+        result.push(innerData.value[i]);
+      }
     }
     return result;
   };
@@ -48,6 +52,16 @@ export function useTree(node: Ref<ITreeNode[]> | ITreeNode[]) {
     node.checked = !node.checked;
 
     getChildren(node).forEach((n) => (n.checked = node.checked));
+
+    // 判断有没有父节点，没有就不联动
+    const parentNode = innerData.value.find(
+      (item) => item.id === node.parentId
+    );
+    if (!parentNode) return;
+
+    // 获取所以子节点，判断是否全部勾选
+    const children = getChildren(parentNode, false);
+    parentNode.checked = children.every((item) => item.checked);
   };
 
   return {
