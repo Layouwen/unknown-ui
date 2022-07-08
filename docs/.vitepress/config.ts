@@ -21,6 +21,7 @@ const sidebar = {
 };
 
 const config = {
+  base: '/unknown-ui/',
   themeConfig: {
     sidebar,
   },
