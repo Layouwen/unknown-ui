@@ -8,7 +8,7 @@ const NODE_INDENT = 24;
 export default defineComponent({
   name: "STree",
   props: treeProps,
-  setup(props: TreeProps) {
+  setup(props: TreeProps, { slots }) {
     const { data, checkable } = toRefs(props);
     const { expendedTree, toggleExpend, getChildren, toggleCheckNode } =
       useTree(data);
@@ -39,6 +39,8 @@ export default defineComponent({
                     width: "25px",
                   }}
                 />
+              ) : slots.icon ? (
+                slots.icon({ nodeData: treeNode, toggleExpend })
               ) : (
                 <svg
                   style={{
@@ -65,7 +67,7 @@ export default defineComponent({
                   onClick={() => toggleCheckNode(treeNode)}
                 />
               )}
-              {treeNode.label}
+              {slots.content ? slots.content({ treeNode }) : treeNode.label}
             </div>
           ))}
         </div>
