@@ -42,9 +42,18 @@ export function useTree(node: Ref<ITreeNode[]> | ITreeNode[]) {
       cur.expanded = !cur.expanded;
     }
   };
+
+  const toggleCheckNode = (node: IInnerTreeNode) => {
+    // 防止 checked 为 undefined
+    node.checked = !node.checked;
+
+    getChildren(node).forEach((n) => (n.checked = node.checked));
+  };
+
   return {
     toggleExpend,
     getChildren,
     expendedTree,
+    toggleCheckNode,
   };
 }

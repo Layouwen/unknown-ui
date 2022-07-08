@@ -1,16 +1,18 @@
 import { defineComponent, toRefs } from "vue";
+import tree from "../index";
 import { useTree } from "./composables/use-tree";
 import { treeProps, TreeProps } from "./tree-type";
 
-const NODE_HEIGHT = 28;
+const NODE_HEIGHT = 24;
 const NODE_INDENT = 24;
 
 export default defineComponent({
   name: "STree",
   props: treeProps,
   setup(props: TreeProps) {
-    const { data } = toRefs(props);
-    const { expendedTree, toggleExpend, getChildren } = useTree(data);
+    const { data, checkable } = toRefs(props);
+    const { expendedTree, toggleExpend, getChildren, toggleCheckNode } =
+      useTree(data);
 
     return () => {
       return (
@@ -55,6 +57,14 @@ export default defineComponent({
                     d="M384 192v640l384-320.064z"
                   ></path>
                 </svg>
+              )}
+
+              {checkable.value && (
+                <input
+                  type="checkbox"
+                  v-model={treeNode.checked}
+                  onClick={() => toggleCheckNode(treeNode)}
+                />
               )}
               {treeNode.label}
             </div>
