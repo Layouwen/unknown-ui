@@ -2,21 +2,35 @@ import { defineComponent, toRefs } from "vue";
 import { useTree } from "./composables/use-tree";
 import { treeProps, TreeProps } from "./tree-type";
 
+const NODE_HEIGHT = 28;
+const NODE_INDENT = 24;
+
 export default defineComponent({
   name: "STree",
   props: treeProps,
   setup(props: TreeProps) {
     const { data } = toRefs(props);
-    const { expendedTree, toggleExpend } = useTree(data);
+    const { expendedTree, toggleExpend, getChildren } = useTree(data);
 
     return () => {
       return (
         <div class="s-tree">
           {expendedTree.value.map((treeNode) => (
             <div
-              class="s-tree-node"
-              style={{ paddingLeft: `${(treeNode.level - 1) * 24}px` }}
+              class="s-tree-node hover:bg-gray-100 relative"
+              style={{ paddingLeft: `${(treeNode.level - 1) * NODE_INDENT}px` }}
             >
+              {/* 显示连接线 */}
+              {!treeNode.isLeaf && treeNode.expanded && (
+                <span
+                  class="s-tree-node__vline absolute w-px bg-gray-100"
+                  style={{
+                    height: `${NODE_HEIGHT * getChildren(treeNode).length}px`,
+                    left: `${NODE_INDENT * (treeNode.level - 1) + 11}px`,
+                    top: `${NODE_HEIGHT}px`,
+                  }}
+                />
+              )}
               {treeNode.isLeaf ? (
                 <span
                   style={{
