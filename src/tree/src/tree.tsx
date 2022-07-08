@@ -1,5 +1,4 @@
 import { defineComponent, toRefs } from "vue";
-import tree from "../index";
 import { useTree } from "./composables/use-tree";
 import { treeProps, TreeProps } from "./tree-type";
 
